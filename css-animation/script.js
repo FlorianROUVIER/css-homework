@@ -1,3 +1,5 @@
+// Toggle Settings menu
+
 const menuButtonElement = document.querySelector('.jsButton')
 const menuElement = document.querySelector('.jsMenu')
 
@@ -10,7 +12,7 @@ menuButtonElement.addEventListener(
 
 )
 
-
+// Change speed on menu 
 
 const speedChange = document.querySelector('.speedCase-1')
 const propellers = document.querySelector('.js-propellers')
@@ -48,4 +50,28 @@ normalSpeed.addEventListener(
     {
         propellers.style.animation = "animation 5s linear infinite"
     }
+)
+
+// Change hexa colors on menu
+
+
+
+const okButton = document.querySelector('.jsOkButton')
+
+okButton.addEventListener(
+    'click',
+    ()=> 
+    {
+       const newHexa = document.querySelector('#hexadecimal').value 
+       const hexaToChange = document.querySelector('.propeller-1')
+       const hexaToChange2 = document.querySelector('.propeller-2')
+       const hexaToChange3 = document.querySelector('.propeller-3')
+       const hexaToChange4 = document.querySelector('.propeller-4')
+       hexaToChange.style.background = `linear-gradient(2deg, ${newHexa}, #bbb, ${newHexa})`
+       hexaToChange2.style.background = `linear-gradient(2deg, ${newHexa}, #bbb, ${newHexa})`
+       hexaToChange3.style.background = `linear-gradient(2deg, ${newHexa}, #bbb, ${newHexa})`
+       hexaToChange4.style.background = `linear-gradient(2deg, ${newHexa}, #bbb, ${newHexa})`
+
+    }
+
 )
